@@ -16,3 +16,21 @@ if (div)
   div.classList.add("bord");
 else
   li.className += ' ' + "bgc";
+
+//toggleClass
+
+div.onclick = function () {
+  if (div.classList) {
+    div.classList.toggle("fs");
+  } else {
+    var classes = div.className.split(' ');
+    var existingIndex = classes.indexOf("fs");
+
+    if (existingIndex >= 0)
+      classes.splice(existingIndex, 1);
+    else
+      classes.push("fs");
+
+    div.className = classes.join(' ');
+  }
+};
