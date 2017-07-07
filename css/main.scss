@@ -1,0 +1,94 @@
+body {
+  font-size: 25px;
+  background: #32373d;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#wrapper {
+  width: 220px;
+  margin: 100px auto;
+  font-size: 0.8125em;
+}
+
+.menu {
+  width: auto;
+  height: auto;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, .73), 0px 0px 18px 0px rgba(0, 0, 0, .13);
+  >li {
+    a {
+      &.active {
+        span {
+          background: #2173a1;
+        }
+      }
+    }
+    >a {
+      background-color: #616975;
+      background-image: linear-gradient(top, rgb(114, 122, 134), rgb(80, 88, 100));
+      border-bottom: 1px solid #33373d;
+      box-shadow: inset 0px 1px 0px 0px #878e98;
+      width: 100%;
+      height: 2.75em;
+      line-height: 2.75em;
+      text-indent: 2.75em;
+      display: block;
+      position: relative;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      color: #fff;
+      text-shadow: 0px 1px 0px rgba(0, 0, 0, .5);
+      &:hover {
+        span {
+          background: #2173a1;
+        }
+      }
+      span {
+        font-size: 0.857em;
+        display: inline-block;
+        position: absolute;
+        right: 1em;
+        top: 50%;
+        background: #48515c;
+        line-height: 1em;
+        height: 1em;
+        padding: .4em .6em;
+        margin: -.8em 0 0 0;
+        color: #fff;
+        text-indent: 0;
+        text-align: center;
+        border-radius: .769em;
+        box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, .26), 0px 1px 0px 0px rgba(255, 255, 255, .15);
+        text-shadow: 0px 1px 0px rgba(0, 0, 0, .5);
+        font-weight: 500;
+      }
+    }
+  }
+  ul {
+    li {
+      &:last-child {
+        a {
+          border-bottom: 1px solid #33373d;
+        }
+      }
+      a {
+        background: #fff;
+        border-bottom: 1px solid #efeff0;
+        width: 100%;
+        height: 2.75em;
+        line-height: 2.75em;
+        text-indent: 2.75em;
+        display: block;
+        position: relative;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 0.923em;
+        font-weight: 400;
+        color: #878d95;
+      }
+    }
+  }
+}
