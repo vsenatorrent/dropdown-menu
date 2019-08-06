@@ -6,39 +6,51 @@ li {
   width: 220px;
   margin: 0 auto;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  border: 1px solid black;
 }
 
 .list {
-  border: 1px solid black;
   margin: 0;
   padding: 0;
   text-align: left;
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.73), 0px 0px 18px 0px rgba(0, 0, 0, 0.13);
+          box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.73), 0px 0px 18px 0px rgba(0, 0, 0, 0.13);
+}
+
+.list__dd-wrapper {
+  background-color: #616975;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
 }
 
 .list__dd-item-name {
   color: #fff;
-  background-color: #616975;
-  font-size: 20px;
   text-decoration: underline;
-  display: block;
-  text-align: center;
-  padding: 15px;
+  font-size: 20px;
+  margin-left: 50px;
 }
 
 .list__dd-item-count {
+  display: inline-block;
   background-color: #48515c;
   padding: 6px 8px;
   text-decoration: none;
   border-radius: 10px;
+  margin-left: auto;
 }
 
 .list__dd-item-count:hover {
-  color: #2173a1;
+  background-color: #2173a1;
 }
 
 .list-sublist {
   padding: 0;
+  display: none;
 }
 
 .list-sublist__item {
@@ -46,5 +58,19 @@ li {
   color: #878d95;
   text-decoration: underline;
   border-bottom: 1px solid #efeff0;
+}
+
+.goToPrevPage {
+  line-height: 30px;
+  border-radius: 50%;
+  border: 1px dashed black;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+}
+
+.goToPrevPage::after {
+  content: '\02190';
+  color: #000;
 }
 /*# sourceMappingURL=main.css.map */

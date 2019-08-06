@@ -108,36 +108,42 @@ li {
   width: 220px;
   margin: 0 auto;
   font-family: $font;
-  border: 1px solid black;
 }
 
 .list {
-  border: 1px solid black;
   margin: 0;
   padding: 0;
   text-align: left;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, .73), 0px 0px 18px 0px rgba(0, 0, 0, .13);
+    &__dd-wrapper {
+      background-color: $dropdown-bg-color;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
     &__dd-item {
       &-name {
         color: #fff;
-        background-color: $dropdown-bg-color;
-        font-size: 20px;
         text-decoration: underline;
-        display: block;
-        text-align: center;
-        padding: 15px;
+        font-size: 20px;
+        margin-left: 50px;
       }
       &-count {
+        display: inline-block;
         background-color: $count-bg-color;
         padding: 6px 8px;
         text-decoration: none;
         border-radius: 10px;
+        margin-left: auto;
         &:hover {
-          color: $count-hover-color;
+          background-color: $count-hover-color;
         }
       }
     }
     &-sublist {
       padding: 0;
+      display: none;
       &__item {
         padding: 10px 20px;
         color: $dropdown-elems-color;
@@ -145,4 +151,17 @@ li {
         border-bottom: 1px solid #efeff0;
       }
     }
+}
+
+.goToPrevPage {
+    line-height: 30px;
+    border-radius: 50%;
+    border: 1px dashed black;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+  &::after {
+    content: '\02190';
+    color: #000;
+  }
 }

@@ -18,3 +18,17 @@
 //     });
  
 // });
+
+
+const dropdownControllers = $('.list__dd-wrapper');
+dropdownControllers.on('click', function(){
+    $('.active').next().slideUp();
+    $('.active').removeClass('active');
+    $(this).addClass('active');
+    $('.active').next().slideToggle();
+})
+
+const goToPrevPageBtn = $('.goToPrevPage');
+goToPrevPageBtn.on('click', function(){
+    history.back(-1);
+})
